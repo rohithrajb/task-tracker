@@ -27,4 +27,12 @@ export class TasksComponent implements OnInit {
 		task.reminder = !task.reminder;
 		this.taskService.updateTaskReminder(task).subscribe();
 	}
+
+	// what that stuff inside the subscribe function does is 'we get back a task, and we are adding that task at the end of the array using push method
+    // so if we remove everything inside the subscribe method, addtask works fine but it won't be updated instantly in the tasks
+	addTask(task: Task) {
+		this.taskService
+			.addTask(task)
+			.subscribe((task) => this.tasks.push(task));
+	}
 }
