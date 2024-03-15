@@ -7,13 +7,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ButtonComponent {
     @Input() 
-    color: string | undefined;
+    color: string = '';
 
     @Input() 
-    content: string | undefined;
+    content: string = '';
 
     @Output()
-    btnClick = new EventEmitter;
+    btnClick = new EventEmitter();
 
     onClick() {
         this.btnClick.emit();
