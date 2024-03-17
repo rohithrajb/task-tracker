@@ -29,12 +29,6 @@
       "day": "June 1st at 10:30AM",
       "reminder": false,
       "id": 8
-    },
-    {
-      "text": "Leetcode problems from Revise list",
-      "day": "March 16 at 10 AM",
-      "reminder": true,
-      "id": 9
     }
   ]
 }
