@@ -3,7 +3,7 @@
 	<app-button
 		*ngIf="hasRoute('/')"
 		color="{{ showAddTask ? 'red' : 'green' }}"
-		content="{{ showAddTask ? 'Close' : 'Add' }}"
+		content="{{ showAddTask ? 'Close' : 'Add Task' }}"
 		(btnClick)="toggleAddTask()"
 	></app-button>
 </header>

@@ -13,16 +13,20 @@ export class AddTaskComponent {
 	onAddTask: EventEmitter<Task> = new EventEmitter();
 
 	text: string = '';
-	day: string = '';
+	day = new Date();
 	reminder: boolean = false;
 
 	showAddTask?: boolean;
 	subscription: Subscription;
 
 	constructor(private uiService: UiService) {
-		this.subscription = this.uiService.onToggle().subscribe(
-			(value) => (this.showAddTask = value)
-		);
+		this.subscription = this.uiService
+			.onToggle()
+			.subscribe((value) => (this.showAddTask = value));
+	}
+
+	setDate(date: Date) {
+		this.day = date;
 	}
 
 	onSubmit() {
@@ -40,7 +44,6 @@ export class AddTaskComponent {
 		this.onAddTask.emit(newTask);
 
 		this.text = '';
-		this.day = '';
 		this.reminder = false;
 	}
 }
