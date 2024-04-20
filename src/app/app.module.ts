@@ -19,6 +19,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialDatepickerComponent } from './components/material-datepicker/material-datepicker.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
 	{
@@ -29,6 +31,14 @@ const appRoutes: Routes = [
 		path: 'about',
 		component: AboutComponent,
 	},
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'sign-up',
+        component: SignUpComponent
+    }
 ];
 
 @NgModule({
@@ -42,6 +52,8 @@ const appRoutes: Routes = [
 		AboutComponent,
 		FooterComponent,
 		MaterialDatepickerComponent,
+  LoginComponent,
+  SignUpComponent,
 	],
 	imports: [
 		BrowserModule,
