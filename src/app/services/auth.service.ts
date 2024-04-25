@@ -25,4 +25,12 @@ export class AuthService {
         const url = `${this.apiUrl}/users/register`;
         return this.http.post(url, user, httpOptions);
     }
+
+    loggedIn() {
+        return !!localStorage.getItem('token');
+    }
+
+    logOutUser() {
+        localStorage.removeItem('token');
+    }
 }

@@ -21,7 +21,6 @@ export class LoginComponent {
     password: string = '';
 
     onLogin() {
-
         const user: User = {
             email: this.emailId,
             password: this.password
