@@ -1,8 +1,8 @@
 <form class="form">
     <div class="title">Welcome,<br><span>log in to continue</span></div>
-    <input type="email" placeholder="Email" name="email" class="input">
-    <input type="password" placeholder="Password" name="password" class="input">
+    <input type="email" name="emailId" [(ngModel)]="emailId" placeholder="Email" class="input">
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Password" class="input">
     <div class="no-account">Don't have an account? <a routerLink="/sign-up">Sign up</a></div>
 
-    <button class="button-confirm">Let`s go →</button>
+    <button class="button-confirm" (click)="onLogin()">Log in →</button>
 </form>

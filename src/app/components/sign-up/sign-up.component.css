@@ -29,7 +29,7 @@
     font-size: 17px;
   }
   
-  .input {
+  input {
     width: 250px;
     height: 40px;
     border-radius: 5px;
@@ -87,6 +87,7 @@
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
     box-shadow: 4px 4px var(--main-color);
+    font-family: "Poppins", sans-serif;
     font-size: 17px;
     font-weight: 600;
     color: var(--font-color-sub);

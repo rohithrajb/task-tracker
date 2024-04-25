@@ -23,14 +23,6 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
-	{
-		path: '',
-		component: TasksComponent,
-	},
-	{
-		path: 'about',
-		component: AboutComponent,
-	},
     {
         path: 'login',
         component: LoginComponent
@@ -38,6 +30,23 @@ const appRoutes: Routes = [
     {
         path: 'sign-up',
         component: SignUpComponent
+    },
+	{
+		path: '',
+		redirectTo: 'login',
+        pathMatch: 'full'
+	},
+    {
+        path: 'tasks',
+        component: TasksComponent
+    },
+	{
+		path: 'about',
+		component: AboutComponent,
+	},
+    {
+        path: '**',
+        component: LoginComponent
     }
 ];
 

@@ -1,10 +1,10 @@
 <form class="form">
     <div class="title">Welcome, <br><span>Enter your details and sign up</span></div>
-    <input type="name" placeholder="Full Name" name="name" class="input">
-    <input type="email" placeholder="Email" name="email" class="input">
-    <input type="password" placeholder="Password" name="password" class="input">
-    <input type="password" placeholder="Re-enter password" name="re-password" class="input">
-    <div class="no-account">Already have an account? <a routerLink="/sign-up">Log in</a></div>
+    <input type="name" name="name" [(ngModel)]="name" placeholder="Full Name">
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+    <!-- <input type="password" name="rePassword" [(ngModel)]="rePassword" placeholder="Re-enter password"> -->
+    <div class="no-account">Already have an account? <a routerLink="/login">Log in</a></div>
 
-    <button class="button-confirm">Let`s go →</button>
+    <button class="button-confirm" (click)="onSignUp()">Sign up →</button>
 </form>
