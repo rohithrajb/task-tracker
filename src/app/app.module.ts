@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     },
 	{
 		path: 'about',
-		component: AboutComponent,
+		component: AboutComponent
 	},
     {
         path: '**',
@@ -69,7 +69,7 @@ const appRoutes: Routes = [
 		FontAwesomeModule,
 		HttpClientModule,
 		FormsModule,
-		RouterModule.forRoot(appRoutes),
+		RouterModule.forRoot(appRoutes, { useHash: true }),
 		MatDatepickerModule,
 		MatFormFieldModule,
 		MatInputModule,
