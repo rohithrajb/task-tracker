@@ -4,21 +4,21 @@ import { Observable } from 'rxjs';
 import { Task } from '../Task';
 
 const getTokenFromLocalStorage = () => {
-    return localStorage.getItem('token');
-}
+	return localStorage.getItem('token');
+};
 
 const secureHttpOptions = {
-    headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'authorization': `Bearer ${getTokenFromLocalStorage()}`
-    })
-}
+	headers: new HttpHeaders({
+		'Content-Type': 'application/json',
+		authorization: `Bearer ${getTokenFromLocalStorage()}`,
+	}),
+};
 
 @Injectable({
 	providedIn: 'root',
 })
 export class TaskService {
-    private apiUrl = 'http://localhost:5000/tasks';
+	private apiUrl = 'https://task-tracker-api-y1zg.onrender.com/tasks';
 
 	constructor(private http: HttpClient) {}
 
@@ -27,7 +27,7 @@ export class TaskService {
 	}
 
 	deleteTask(task: Task): Observable<Task> {
-        const url = `${this.apiUrl}/${task._id}`;
+		const url = `${this.apiUrl}/${task._id}`;
 		return this.http.delete<Task>(url, secureHttpOptions);
 	}
 

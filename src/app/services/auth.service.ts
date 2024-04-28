@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = 'http://localhost:5000';
+    private apiUrl = 'https://task-tracker-api-y1zg.onrender.com';
 
     constructor(private http: HttpClient) { }
 
