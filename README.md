@@ -1,3 +1,11 @@
+Frontend deployment: https://rohithrajb.github.io/task-tracker
+
+The server becomes inactive if not visited in a while. So open the below link once before making requests from frontend.
+
+Backend deployment: https://task-tracker-api-y1zg.onrender.com/
+
+Backend repo: https://github.com/rohithrajb/task-tracker-api
+
 # TaskTracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
