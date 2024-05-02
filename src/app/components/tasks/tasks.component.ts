@@ -17,20 +17,23 @@ export class TasksComponent implements OnInit {
 	}
 
 	deleteTask(task: Task) {
-        this.taskService
+		this.taskService
 			.deleteTask(task)
 			.subscribe(
-				() => (this.tasks = this.tasks.filter((t) => t._id !== task._id))
+				() =>
+					(this.tasks = this.tasks.filter((t) => t._id !== task._id))
 			);
 	}
-    
+
 	toggleReminder(task: Task) {
 		task.reminder = !task.reminder;
-		this.taskService.updateTaskReminder(task).subscribe();
+		this.taskService
+			.updateTaskReminder(task)
+			.subscribe(() => {
+                if(task.reminder) alert('Reminder on. You will be reminded via email');
+            });
 	}
 
-	// what that stuff inside the subscribe function does is 'we get back a task, and we are adding that task at the end of the array using push method
-    // so if we remove everything inside the subscribe method, addtask works fine but it won't be updated instantly in the tasks
 	addTask(task: Task) {
 		this.taskService
 			.addTask(task)
