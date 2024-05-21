@@ -1,12 +1,12 @@
-# Instructions to view the application
+# Instructions to use the deployed website
 
-Frontend deployment: https://rohithrajb.github.io/task-tracker
+Visit: https://rohithrajb.github.io/task-tracker
 
-The server becomes inactive if not visited in a while. So open the below link once before making requests from frontend.
-
-Backend deployment: https://task-tracker-api-y1zg.onrender.com/
+> [!NOTE]
+> ***The server becomes inactive if not visited in a while. So, wait for a minute after trying to login or sign up. The site should respond.***
 
 Backend repo: https://github.com/rohithrajb/task-tracker-api
+
 
 # TaskTracker
 
